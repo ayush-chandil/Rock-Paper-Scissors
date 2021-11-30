@@ -7,82 +7,57 @@ body{
     background-color:#cfdfff;
 }
 
-img{
-  cursor:pointer;
-  width:50%;
-  height:20%;
-  
-}
+
 
 h1{
     text-align: center;
+    font-family: 'Monstreat',sans-serif;
 }
 
 #start{
-    max-width:900px;
-    margin-left:350px;
-    margin-top:20px;
+    cursor:pointer;
+    max-width:600px;
+    margin-left:450px;
+    margin-top:50px;
+    
 }
 
-.game .player1{
-    flex-grow: 1; 
-    display:flex;
-    margin:50px;
+.player1{
+    flex-grow:1; 
+    
 }
 
-.game .player2{
-     flex-grow: 1; 
-    display:flex;
-    flex-direction:flex-end;
-    margin:50px;
-}
-
-
-
-#play{
-    text-align: center;
-    font-style:bold;
-    font-size:25px;
+.heading{
     margin-left:50px;
-    font-weight: 500;
+    font-size:20px;
+    font-family:'Monstreat',sans-serif;
 }
 
-#comp{
-    text-align: center;
-    font-style:bold;
-    font-size:25px;
-    margin-left:80px;
-    font-weight: 500;
+ .player2{
+    flex-grow: 1; 
+    margin-left:250px;
 }
+
 
 .game{
     display:flex;
     font-weight: 400;
 }
 
-
-
- .player1 img{
+.player1 img{
    
-    display:inline-block;
+    display:flex;
     height:50%;
     width:150px;
-    margin: 100px 5px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left:-10px;
-
+    margin: 100px 20px;
+    cursor:pointer;
 } 
 
 .player2 img{
     display:flex;
     height:50%;
-    margin: 100px 10px;
+    margin: 100px 100px;
     width:150px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: -5px;
-
 }
 
 .choose{
@@ -90,6 +65,11 @@ h1{
     display: flex;
     width:150px;
 
+}
+
+#select{
+    display:flex;
+    margin-left:250px;
 }
 
 p.result{
@@ -105,4 +85,42 @@ p.result{
     max-width:50px;
     display: block;
     
+}
+
+
+@media screen and (max-width:900px){
+    #start{
+        margin-left:80px;
+        margin-top:90px;
+        width:350px;
+    }
+
+    h1{
+       font-size:30px;
+       font-family: 'Monstreat',sans-serif;
+       margin-left:100px;
+       white-space: nowrap;
+    }
+
+    .player1 img{
+   
+        display:flex;
+        height:50%;
+        width:150px;
+        margin: 100px 10px;
+        cursor:pointer;
+    } 
+    
+
+    .player2 img{
+        display:flex;
+        height:50%;
+        margin: 100px 100px;
+        
+    }
+
+    #select{
+        display:flex;
+        margin-left:50px;
+    }
 }

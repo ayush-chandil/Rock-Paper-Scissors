@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './style.css';
-import Start from '../images/start1.png';
+
 
 
 
@@ -51,12 +51,12 @@ class Game extends Component {
     return (
       <div>
         <h1>Rock Paper Scissors</h1>
-
+        
         {Started ? (
           <div className="game">
             
-            <div className="player1"><p id="play">Player</p>
-              {Player ? (<img src={Images[Player]} />) : (
+            <div className="player1">
+              {Player ? (<img src={Images[Player]} id="select"/>) : (
                 <div className="choose">
 
                   {Object.keys(Images).map((a) => (
@@ -72,7 +72,9 @@ class Game extends Component {
                     }}>
 
                       <img src={Images[a]} alt={a} />
+                     <div className="heading"> 
                       {a}
+                      </div>
                     </span>
                   ))}
                 </div>
@@ -81,7 +83,7 @@ class Game extends Component {
 
 
 
-            <div className="player2"><p id="comp">Computer</p>
+            <div className="player2">
                 
               {Computer ? (<img src={Images[Computer]} />) : (
                 <img src="https://i.imgur.com/CyvHqQH.png" />
@@ -91,7 +93,7 @@ class Game extends Component {
           </div>
 
         ) : (
-          <img src={Start} id="start" alt="Start" onClick={() => {
+          <img src="https://i.imgur.com/FrnyhhB.png" id="start" alt="Start" onClick={() => {
             this.setState({ Started: true });
           }} />
         )}
